@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy 15th Birthday Narjes!</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #fce7f3, #f9a8d4);
+      min-height: 100vh;
+      font-family: 'Arial', sans-serif;
+      overflow-x: hidden;
+    }
+    .monkey-emoji {
+      font-size: 2rem;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .hidden { display: none; }
+    .message-box {
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="flex flex-col items-center justify-center text-center text-gray-800">
+  <div class="max-w-2xl mx-auto p-6">
+    <h1 class="text-5xl font-bold text-pink-600 mb-4">Happy 15th Birthday, Narjes! 🐒🎉</h1>
+    <p class="text-xl text-pink-800 mb-6">Welcome to your special Labubu/Bikini Monkey-themed birthday!</p>
+    <div class="flex justify-center gap-4 mb-8">
+      <button id="acceptBtn" class="bg-pink-500 text-white font-semibold py-2 px-6 rounded-full hover:bg-pink-600 transition duration-300">Accept the Offer</button>
+      <button id="blackDudeBtn" class="bg-pink-500 text-white font-semibold py-2 px-6 rounded-full hover:bg-pink-600 transition duration-300">I'm a Black Dude</button>
+    </div>
+    <div id="birthdayMessage" class="hidden bg-white p-6 rounded-lg shadow-lg text-pink-800 message-box">
+      <p class="text-lg">Hi there Labubu Narjes! Happy 15th birthday! I hope you achieve anything you want in this life, and I just wanted to say that I really wanna see you win and that I want the best for you. So keep smiling, sunshine, and make sure to turn into a pink bikini monkey! Sincerely yours, Islem 🩷</p>
+    </div>
+    <div class="mt-8">
+      <p class="text-2xl text-pink-700">You're officially 15, Narjes C:<span class="monkey-emoji">🐒</span></p>
+    </div>
+  </div>
+  <script>
+    const acceptBtn = document.getElementById('acceptBtn');
+    const blackDudeBtn = document.getElementById('blackDudeBtn');
+    const birthdayMessage = document.getElementById('birthdayMessage');
+
+    acceptBtn.addEventListener('click', () => {
+      birthdayMessage.classList.toggle('hidden');
+    });
+
+    blackDudeBtn.addEventListener('click', () => {
+      birthdayMessage.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
